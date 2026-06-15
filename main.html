@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Offline Games</title>
+    <style>
+        .main {
+            height: 98vh;
+            width: 98vw;
+        }
+        .three-cols {
+            display: grid;
+            grid-template-columns: 30vw 40vw 30vw;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(9, 4.44vw);
+            grid-template-rows: repeat(9, 4.44vw);
+        }
+        .rb-border-cell {
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .lb-border-cell {
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .lrb-border-cell {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .rt-border-cell {
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .lt-border-cell {
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .lrt-border-cell {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .rtb-border-cell {
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .ltb-border-cell {
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .lrtb-border-cell {
+            border: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="main">
+    <h1>Offline Games</h1>
+
+    <div id="content"></div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
