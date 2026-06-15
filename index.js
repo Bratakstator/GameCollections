@@ -19,6 +19,18 @@ const cell_classes = [
     "lrtb-border-cell"
 ]
 
+const counts = [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+]
+
 let cell_class_index = 0;
 let html = "";
 for (let i = 0; i < per_row * per_col; i++) {
@@ -54,13 +66,34 @@ for (let i = 0; i < per_row * per_col; i++) {
         i === 40
     ) cell_class_index = 8
 
-    html += `<div class=${cell_classes.at(cell_class_index)}>${randomInt(9)}</div>`;
+    const integer = randomInt(9);
+    counts[integer]++;
+
+    html += `<div class=${cell_classes.at(cell_class_index)}>${integer + 1}</div>`;
 }
 content.innerHTML = `
     <div class="three-cols">
-        <div></div>
-        <div class="grid">
-            ${html}
+        <div class="two-rows">
+            <div>
+                <h1>Offline Games</h1>
+            </div>
+            <div>
+                <h4>Counts:</h4>
+                <p>1 = ${counts[0]}</p>
+                <p>2 = ${counts[1]}</p>
+                <p>3 = ${counts[2]}</p>
+                <p>4 = ${counts[3]}</p>
+                <p>5 = ${counts[4]}</p>
+                <p>6 = ${counts[5]}</p>
+                <p>7 = ${counts[6]}</p>
+                <p>8 = ${counts[7]}</p>
+                <p>9 = ${counts[8]}</p>
+            </div>
+        </div>
+        <div>
+            <h2>Sudoku</h2>
+            <p style="text-align: center; padding-bottom: 30px">Classic</p>
+            <div class="grid">${html}</div>
         </div>
         <div></div>
     </div>
